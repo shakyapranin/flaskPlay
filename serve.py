@@ -1,5 +1,8 @@
 from flask import Flask, jsonify, json, request
 
+port = 9999 # Change port variable as per need
+debug = True # Change debug mode as per need
+
 app = Flask(__name__)
 
 products = [{ 'id': 1, 'name': 'Product 1'}, { 'id':2, 'name': 'Product 2' }, { 'id':3, 'name': 'Product 3' }]
@@ -39,5 +42,5 @@ def delete(id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=9999)
+    app.run(debug=debug, port=port)
 
