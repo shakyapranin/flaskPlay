@@ -36,7 +36,7 @@ def update(id):
 @app.route('/api/products/<int:id>', methods=['DELETE'])
 def delete(id):
     filtered_products = [product for product in products if product['id'] == id]
-    del filtered_products[0]
+    products.remove(filtered_products[0])
 
     return jsonify(products)
 
